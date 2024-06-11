@@ -1,0 +1,102 @@
+[
+  {
+    "objectID": "bp_measurement.html",
+    "href": "bp_measurement.html",
+    "title": "2  Blood Pressure Measurements",
+    "section": "",
+    "text": "2.1 Aim:",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Blood Pressure Measurements</span>"
+    ]
+  },
+  {
+    "objectID": "bp_measurement.html#aim",
+    "href": "bp_measurement.html#aim",
+    "title": "2  Blood Pressure Measurements",
+    "section": "",
+    "text": "To determine the blood pressure of the subject using mechanical and electronic BP meters.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Blood Pressure Measurements</span>"
+    ]
+  },
+  {
+    "objectID": "bp_measurement.html#apparatus",
+    "href": "bp_measurement.html#apparatus",
+    "title": "2  Blood Pressure Measurements",
+    "section": "2.2 Apparatus:",
+    "text": "2.2 Apparatus:\n\nSphygmomanometer, sthethoscope, and a digital BP monitor.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Blood Pressure Measurements</span>"
+    ]
+  },
+  {
+    "objectID": "bp_measurement.html#theory",
+    "href": "bp_measurement.html#theory",
+    "title": "2  Blood Pressure Measurements",
+    "section": "2.3 Theory:",
+    "text": "2.3 Theory:\n\n2.3.1 Sphygmomanometer\n\nSphygmomanometer is a medical device used to measure blood pressure. It typically consists of an inflatable cuff that is wrapped around the upper arm, a measuring unit (mercury) and a mechanism for inflating the cuff, usually a bulb and a valve.\n\n\n\n\n\n\n\n\n2.3.2 Digital BP Monitor\n\nA digital blood pressure (BP) monitor is an electronic device designed to measure blood pressure and heart rate. It automates the process of inflating the cuff, measuring the blood pressure, and displaying the results, making it easier to use compared to traditional manual sphygmomanometers.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Blood Pressure Measurements</span>"
+    ]
+  },
+  {
+    "objectID": "bp_measurement.html#procedure",
+    "href": "bp_measurement.html#procedure",
+    "title": "2  Blood Pressure Measurements",
+    "section": "2.4 Procedure",
+    "text": "2.4 Procedure\n\n2.4.1 Sphygmomanometer\n\nSubject is made to sit parallel to the mercury level of the monitor. The mercury knob is made opened.\nRough side of the cuff is placed on top of the left hand and is tied tightly on the brachial artery (point on left hand, where pulse is felt).\nStethoscope is placed on brachial artery just below the cuff’s sensor to record Korotkoff’s sounds (Heard when medical personnel listen for when they are taking blood pressure using a non invasive procedure).\nThe pressure is increased till 180mmHg using rubber bulb or inflator.\n\n\n2.4.1.1 Note\n\nOnset point of Korotkoff sound is the Systolic pressure\nDying of the Korotkoff sound is Diastolic pressure\n\n\nand the readings are taken accordingly.\n\n\n\n\n2.4.2 Digital Blood Pressure Monitor\n\nDigital sphygmomanometers are automated, providing blood pressure reading without needing someone to operate the cuff or listen to the blood flow.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Blood Pressure Measurements</span>"
+    ]
+  },
+  {
+    "objectID": "bp_measurement.html#observation",
+    "href": "bp_measurement.html#observation",
+    "title": "2  Blood Pressure Measurements",
+    "section": "2.5 Observation",
+    "text": "2.5 Observation\n\n\n\n\n\n\n\n\n\nObservation table for Mechanical BP meter\n\n\nData taken from Mechanical BP meter\n\n\nStudent Name\nBP Readings\nMean Arterial Pressure (MAP)\nAnalysis\n\n\n\n\nKulkarni sir\n120/80\n93.33\nNormal\n\n\nMonika\n110/70\n83.33\nNormal\n\n\nKushaal\n130/90\n103.33\nPre-hypertension\n\n\nNamyatha\n120/83\n95.33\nNormal\n\n\nKarthik\n125/85\n98.33\nPre-hypertension\n\n\nJanane\n110/65\n80.00\nNormal\n\n\nOmar\n110/70\n83.33\nNormal\n\n\nHasan\n100/70\n80.00\nNormal\n\n\nSaad\n120/85\n96.66\nNormal\n\n\nManasa\n90/86\n87.33\nNormal\n\n\nMayuri\n110/75\n86.66\nNormal\n\n\nNidhi\n110/90\n96.66\nNormal\n\n\nLakshita\n100/70\n80.00\nNormal\n\n\n\nSource: DTE Lab, 4th floor, Dept of Medical Electronics\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nObservation table for Digital BP meter\n\n\nData taken from Digital BP meter\n\n\nStudent Name\nBP Readings\nMean Arterial Pressure (MAP)\nAnalysis\n\n\n\n\nKulkarni sir\n117/85\n95.66\nNormal\n\n\nMonika\n99/64\n75.66\nHypotension\n\n\nKushaal\n112/80\n90.66\nNormal\n\n\nNamyatha\n126/74\n91.33\nNormal\n\n\nKarthik\n119/80\n93.00\nNormal\n\n\nJanane\n112/70\n84.00\nNormal\n\n\nOmar\n117/67\n83.66\nNormal\n\n\nHasan\n98/70\n79.33\nHypotension\n\n\nSaad\n115/76\n89.00\nNormal\n\n\nManasa\n82/69\n73.33\nHypotension\n\n\nMayuri\n115/76\n89.00\nNormal\n\n\nNidhi\n100/80\n86.66\nNormal\n\n\nLakshita\n85/73\n77.00\nHypotension\n\n\n\nSource: DTE Lab, 4th floor, Dept of Medical Electronics",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Blood Pressure Measurements</span>"
+    ]
+  },
+  {
+    "objectID": "bp_measurement.html#calculations",
+    "href": "bp_measurement.html#calculations",
+    "title": "2  Blood Pressure Measurements",
+    "section": "2.6 Calculations",
+    "text": "2.6 Calculations\n\\[\nMAP = \\frac{1}{3} (SP - DP) + DP\n\\]\nwhere \\(MAP\\) is Mean Arterial Pressure\n\nSphygmomanometer\n\n\\[\n\\frac{1}{3} (120 - 80) + 80 = 93.33\n\\]\n\nDigital BP meter\n\n\\[\n\\frac{1}{3} (117 - 85) + 85 = 95.66\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Blood Pressure Measurements</span>"
+    ]
+  },
+  {
+    "objectID": "bp_measurement.html#analysis",
+    "href": "bp_measurement.html#analysis",
+    "title": "2  Blood Pressure Measurements",
+    "section": "2.7 Analysis",
+    "text": "2.7 Analysis\n\nWe observe that there is a change in MAP with change in BP levels.\nGenerally, if there’s a difference between systolic and diastolic pressure is 40 mmHg, the subject is considered to be normal.\nIf the difference between systolic and diastolic pressure ranges between 30 - 50 mmHg, the subject is considered to be normal depending on the conditions.\nIf systolic and diastolic pressure difference is \\(&lt;30mmHg\\), the subject has low BP which leads to hypotension.\nIf difference is \\(&gt;50mmHg\\), the subject has high BP which leads to hypertension.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Blood Pressure Measurements</span>"
+    ]
+  },
+  {
+    "objectID": "bp_measurement.html#result",
+    "href": "bp_measurement.html#result",
+    "title": "2  Blood Pressure Measurements",
+    "section": "2.8 Result",
+    "text": "2.8 Result\n\nThe working and analysis of mechanical and electronic BP meters are analyzed.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Blood Pressure Measurements</span>"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Diagnostic and Therapeutic Equipments Lab Report",
+    "section": "",
+    "text": "Certificate",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Certificate{-}</span>"
+    ]
+  }
+]

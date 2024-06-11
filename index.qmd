@@ -1,0 +1,65 @@
+---
+header-includes: |
+    \usepackage{graphicx}
+    \usepackage{fontspec}
+    \setmainfont{Times New Roman}
+    \usepackage{geometry}
+    \pagestyle{empty}
+---
+
+## Certificate{-}
+
+```{=tex}
+\begin{center}
+    \includegraphics[width=0.3\textwidth]{bmsce_logo.svg.png} % Adjust width as needed
+\end{center}
+
+\begin{center}
+    \LARGE \textbf{Department of Medical Electronics}
+\end{center}
+
+\begin{center}
+    \large B.M.S College of Engineering
+\end{center}
+
+\begin{center}
+    \textit{Autonomous college, Affiliated to VTU Belgaum}
+\end{center}
+
+\begin{center}
+    \textbf{Bangalore - 560019}
+\end{center}
+
+\begin{center}
+    \textbf{2023 - 24}
+\end{center}
+
+
+\begin{center}
+    \textbf{Lab Report on:}
+\end{center}
+
+\begin{center}
+    \large \textbf{Diagnostic and Therapeutic Equipments}
+\end{center}
+
+\begin{center}
+    \textit{By}
+\end{center}
+
+\begin{center}
+    \textbf{Karthik Dani (1BM22MD022)}
+\end{center}
+
+\begin{center}
+    \large \textbf{Course Instructor:}
+\end{center}
+
+\begin{center}
+    \textbf{Dr.R.Kalpana}
+\end{center}
+
+\begin{center} 
+  \textit{Associate Professor, Dept of Medical Electronics}
+\end{center}
+```

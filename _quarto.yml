@@ -1,0 +1,73 @@
+project:
+  type: book
+
+# Book Metadata
+book:
+  title: "Diagnostic and Therapeutic Equipments Lab Report"
+  author: "Karthik Dani"
+  date: "2024-06-11"  # Use ISO format for date
+  chapters:
+    - index.qmd
+    - bp_measurement.qmd
+    - ecg_measurement.qmd
+
+# Bibliography
+bibliography: references.bib
+
+# Table of Contents
+toc: true
+toc-depth: 2
+toc-title: "Table of Contents"
+
+# Formatting Options
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    code-fold: true
+    css: styles.css
+    toc-title: "Table of Contents"
+    title-block-banner: true
+    link-external-icon: true
+    
+  pdf:
+    documentclass: scrreprt
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    geometry: "margin=1in"
+    links-as-notes: true
+    fontsize: 11pt
+    latex-engine: xelatex
+    keep-tex: true
+  epub:
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    cover-image: cover.png
+    css: styles.css
+
+# Language and Localization
+lang: en
+
+# Execution Options
+execute:
+  echo: true
+  warning: false
+  error: false
+
+# Editor
+editor: visual
+
+# Accessibility Features
+accessibility:
+  skip-links: true
+  aria-labels: true
+
+# Additional Project-level Configurations
+number-sections: true
+
+# Footer
+footer: "Quarto"
