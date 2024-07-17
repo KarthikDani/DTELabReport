@@ -2,11 +2,13 @@
 
 ## Aim
 
-> To measure the hearing loss of a person and analyze the different types of tests.
+> To measure the hearing loss of a person and conduct the air conduction and bone conduction tests.
 
 ## Theory
 
 Audiometry is a branch of audiology and the science of measuring hearing acuity for variations in sound intensity and pitch and for tonal purity, involving thresholds and differing frequencies. Typically, audiometric tests determine a subject's hearing levels with the help of an audiometer, but may also measure ability to discriminate between different sound intensities, recognize pitch, or distinguish speech from background noise.
+
+![](images/clipboard-689549047.png){fig-align="center" width="364" height="340"}
 
 Pure tone audiometry and audiograms - is a standardized hearing test in which air conduction hearing thresholds in decibels (db) for a set of fixed frequencies between 250 Hz and 8,000 Hz are plotted on an audiogram for each ear independently. A separate set of measurements is made for bone conduction. There is also high frequency Pure Tone Audiometry covering the frequency range above 8000 Hz to 16,000 Hz.
 
@@ -29,7 +31,7 @@ Air and Bone conduction testing are methods of evaluating hearing loss by compar
 9.  Click on save test → type the name & save the data.
 10. The same procedure can be repeated for both Air & Bone Conduction Tests.
 
-## Observation
+## Observation: Air Conduction test
 
 ```{r echo=FALSE}
 # Load necessary libraries
@@ -633,6 +635,157 @@ table_grob <- rasterGrob(table_img, interpolate = TRUE)
 # Combine the table and the plot in a single grid
 grid.arrange(table_grob, graph_plot, ncol = 1, heights = c(4, 3))
 
+```
+
+## Observation: Bone Conduction test
+
+```{r echo=FALSE}
+library(ggplot2)
+library(dplyr)
+library(gridExtra)
+library(grid)
+library(tibble)
+library(gt)
+library(png)
+
+audiometry_data <- tibble( 
+  Frequency = c(500, 750, 1000, 1500, 2000, 3000, 4000, 6000, 8000), 
+  dB = c(40, 35, 30, 25, 20, 15, 10, 10, 5) 
+  )
+
+subject_name <- "Namyatha"
+ear_masked <- "Right"
+
+# Identify points with "No hearing"
+audiometry_data <- audiometry_data %>%
+  mutate(Label = ifelse(dB <= 5, "No hearing", "Hearing"),
+         Coordinates = paste0("(", Frequency, ", ", dB, ")"))
+
+# Create the table plot with gt
+table_plot <- audiometry_data %>%
+  gt() %>%
+  tab_header(
+    title = "Bone Conduction Left (BCL)",
+    subtitle = paste(subject_name, "- Sensor to:", ear_masked)
+  ) %>%
+  cols_label(
+    Frequency = "Frequency (Hz)",
+    dB = "dB",
+    Label = "Label",
+    Coordinates = "Coordinates"
+  ) %>%
+  fmt_number(
+    columns = vars(Frequency, dB),
+    decimals = 0
+  ) %>%
+  tab_style(
+    style = list(
+      cell_text(weight = "bold")
+    ),
+    locations = cells_body(
+      columns = vars(Frequency, dB)
+    )
+  )
+
+# Save the gt table as an image with increased size
+gtsave(table_plot, "table_plot.png", vwidth = 800, vheight = 500, zoom = 2)
+
+# Create the frequency vs. dB plot
+graph_plot <- ggplot(audiometry_data, aes(x = Frequency, y = dB)) +
+  geom_line(color = "blue") +
+  geom_point(color = "red", size = 0.5) +
+  geom_text(aes(label = Coordinates), vjust = 1.5, color = "black", size = 2) +  # Add coordinates
+  scale_x_log10(breaks = c(500, 750, 1000, 1500, 2000, 3000, 4000, 6000, 8000), labels = c("500", "750", "1000", "1500", "2000", "3000", "4000", "6000", "8000")) +
+  labs(
+    title = paste("Audiometry: Frequency vs. dB\n", subject_name, "- Sensor to: ", ear_masked),
+    x = "Frequency (Hz)",
+    y = "dB"
+  ) +
+  theme_minimal(base_size = 7) +
+  ylim(-10, 50) +
+  scale_y_reverse()
+
+# Read the saved table image
+table_img <- readPNG("table_plot.png")
+table_grob <- rasterGrob(table_img, interpolate = TRUE)
+
+# Combine the table and the plot in a single grid
+grid.arrange(table_grob, graph_plot, ncol = 1, heights = c(4, 3))
+
+```
+
+```{r echo=FALSE}
+library(ggplot2)
+library(dplyr)
+library(gridExtra)
+library(grid)
+library(tibble)
+library(gt)
+library(png)
+
+audiometry_data <- tibble( 
+  Frequency = c(500, 750, 1000, 1500, 2000, 3000, 4000, 6000, 8000), 
+  dB = c(40, 35, 30, 25, 20, 15, 10, 10, 5) 
+  )
+
+subject_name <- "Manasa"
+ear_masked <- "Right"
+
+# Identify points with "No hearing"
+audiometry_data <- audiometry_data %>%
+  mutate(Label = ifelse(dB <= 10, "No hearing", "Hearing"),
+         Coordinates = paste0("(", Frequency, ", ", dB, ")"))
+
+# Create the table plot with gt
+table_plot <- audiometry_data %>%
+  gt() %>%
+  tab_header(
+    title = "Bone Conduction Left (BCL)",
+    subtitle = paste(subject_name, "- Sensor to:", ear_masked)
+  ) %>%
+  cols_label(
+    Frequency = "Frequency (Hz)",
+    dB = "dB",
+    Label = "Label",
+    Coordinates = "Coordinates"
+  ) %>%
+  fmt_number(
+    columns = vars(Frequency, dB),
+    decimals = 0
+  ) %>%
+  tab_style(
+    style = list(
+      cell_text(weight = "bold")
+    ),
+    locations = cells_body(
+      columns = vars(Frequency, dB)
+    )
+  )
+
+# Save the gt table as an image with increased size
+gtsave(table_plot, "table_plot.png", vwidth = 800, vheight = 500, zoom = 2)
+
+# Create the frequency vs. dB plot
+graph_plot <- ggplot(audiometry_data, aes(x = Frequency, y = dB)) +
+  geom_line(color = "blue") +
+  geom_point(color = "red", size = 0.5) +
+  geom_text(aes(label = Coordinates), vjust = 1.5, color = "black", size = 2) +  # Add coordinates
+  scale_x_log10(breaks = c(500, 750, 1000, 1500, 2000, 3000, 4000, 6000, 8000), labels = c("500", "750", "1000", "1500", "2000", "3000", "4000", "6000", "8000")) +
+  labs(
+    title = paste("Audiometry: Frequency vs. dB\n", subject_name, "- Sensor to: ", ear_masked),
+    x = "Frequency (Hz)",
+    y = "dB"
+  ) +
+  theme_minimal(base_size = 7) +
+  ylim(-10, 50) +
+  scale_y_reverse()
+
+# Read the saved table image
+table_img <- readPNG("table_plot.png")
+table_grob <- rasterGrob(table_img, interpolate = TRUE)
+
+# Combine the table and the plot in a single grid
+grid.arrange(table_grob, graph_plot, ncol = 1, heights = c(4, 3))
 ```
 
 ## Analysis

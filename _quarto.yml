@@ -27,6 +27,7 @@ book:
     - simulation_defibrillator.qmd
     - simulation_pacemaker.qmd
     - simulation_hemodialysis_machine.qmd
+    - hospital_visit.qmd
 
 # Bibliography
 bibliography: references.bib
