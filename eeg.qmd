@@ -1,4 +1,4 @@
-# EEG Signal Acquisition with Bio-PAC
+# EEG Signal Acquisition with Bio-PAC and ENOBIO
 
 ## Aim
 
@@ -21,7 +21,9 @@
 -   Beta - $\beta$ (13-30 Hz): Associated with active thinking, focus, and problem-solving.
 -   Gamma - $\gamma$ (30-100 Hz): Related to high-level information processing and cognitive functioning.
 
-## Procedure
+## Using Bio-PAC 
+
+### Procedure for Bio-PAC
 
 1.  
 
@@ -33,7 +35,7 @@
 
 3.  Now position the subject away from computer, ask to close their eyes and relax. Then carry out recording and saving for each subject acquisition data then copy and paste in excel.
 
-## Observation
+### Observation
 
 ```{r echo=FALSE}
 library(gt)
@@ -71,10 +73,79 @@ table <- data |>
 # Display the table
 table
 ```
+## Using ENOBIO
+### Procedure for ENOBIO
+
+1.  Open the NIC 2 application
+2.  Select appropriate protocol or create one. Drag and drop the channel names into the right side bar.
+3.  Ensure all the electrodes are properly touching the skull
+4.  Calibrate and start recording. Use `.easy` file for analysis in Python.
+
+### Observation
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Read and preprocess the .easy file
+file_path = '/Users/karthik/Desktop/Raw EEG Analysis/20240702153206_JEEVAN 1_Protocol 1.easy'
+column_names = [f'Channel_{i+1}' for i in range(8)] + ['Unused_1', 
+'Unused_2', 'Unused_3', 'Unused_4', 'Timestamp']
+
+eeg_data = pd.read_csv(file_path, delim_whitespace=True, header=None, 
+names=column_names)
+
+# Extract only the EEG channels and the timestamp
+eeg_channels = eeg_data[column_names[:8]]
+timestamps = eeg_data['Timestamp']
+
+# Normalize the data
+eeg_channels_normalized = (eeg_channels - eeg_channels.mean()) / eeg_channels.std()
+
+plt.figure(figsize=(18, 12))
+for i, channel in enumerate(eeg_channels_normalized.columns):
+    plt.subplot(8, 1, i + 1)
+    sns.lineplot(x=timestamps, y=eeg_channels_normalized[channel])
+    plt.title(channel)
+    plt.xlabel('Timestamp')
+    plt.ylabel('Normalized Amplitude')
+
+plt.tight_layout()
+plt.show()
+
+```
+Plot for Waveforms of `channel_1` to `channel_8`
+```{python}
+import numpy as np
+from scipy.signal import welch
+
+statistics = eeg_channels.describe()
+
+print("Basic Statistics for each channel:")
+print(statistics)
+
+# Plot the power spectral density (PSD) for each channel
+plt.figure(figsize=(18, 12))
+for i, channel in enumerate(eeg_channels.columns):
+    plt.subplot(8, 1, i + 1)
+    freqs, psd = welch(eeg_channels[channel], fs=500)
+    sns.lineplot(x=freqs, y=psd)
+    plt.title(f'PSD - {channel}')
+    plt.xlabel('Frequency (Hz)')
+    plt.ylabel('Power/Frequency (dB/Hz)')
+
+plt.tight_layout()
+plt.show()
+
+```
+Power Spectral Density graph for each of the channels.
 
 ## Analysis
 
-The EEG Signals are acquired from the above mentioned readings. We recorded the raw EEG while the subject was relaxed with eyes closed. For EEG recording with MP35 system, it was important to position the subject away from the computer and to place MP35 away from the computer (set aside or clip to subject)
+The EEG Signals are acquired from the above mentioned readings. We recorded the raw EEG while the subject was relaxed with eyes closed. For EEG recording with MP35 system, it was important to position the subject away from the computer and to place MP35 away from the computer (set aside or clip to subject).
+
+In the ENOBIO recording, the subject's Power spectrum showed most of the frequencies were around 10-15 Hz in majority of the channels. For `channel_8` some frequencies were found to be ~$50Hz$.
 
 ## Result
 

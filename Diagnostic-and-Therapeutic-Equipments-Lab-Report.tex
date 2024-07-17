@@ -54,6 +54,46 @@
   \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
 
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{241,243,245}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
 
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
@@ -730,8 +770,8 @@ The EMG signal is thus acquired and recorded.
 
 \bookmarksetup{startatroot}
 
-\chapter{EEG Signal Acquisition with
-Bio-pac}\label{eeg-signal-acquisition-with-bio-pac}
+\chapter{EEG Signal Acquisition with Bio-PAC and
+ENOBIO}\label{eeg-signal-acquisition-with-bio-pac-and-enobio}
 
 \section{Aim}\label{aim-3}
 
@@ -778,7 +818,9 @@ Acquisition of EEG Signal using Bio-PAC using Bio-PAC system.
   processing and cognitive functioning.
 \end{itemize}
 
-\section{Procedure}\label{procedure-4}
+\section{Using Bio-PAC}\label{using-bio-pac}
+
+\subsection{Procedure for Bio-PAC}\label{procedure-for-bio-pac}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -813,7 +855,7 @@ Acquisition of EEG Signal using Bio-PAC using Bio-PAC system.
   acquisition data then copy and paste in excel.
 \end{enumerate}
 
-\section{Observation}\label{observation-3}
+\subsection{Observation}\label{observation-3}
 
 \begin{longtable*}{lrrrrrrr}
 \caption*{
@@ -828,13 +870,131 @@ Subject 2 & 25.17906 & -47.7230 & 24.745 & 0.040400 & 10.11118 & 5.62537 & 8761 
 \bottomrule
 \end{longtable*}
 
-\section{Analysis}\label{analysis-3}
+\section{Using ENOBIO}\label{using-enobio}
+
+\subsection{Procedure for ENOBIO}\label{procedure-for-enobio}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Open the NIC 2 application
+\item
+  Select appropriate protocol or create one. Drag and drop the channel
+  names into the right side bar.
+\item
+  Ensure all the electrodes are properly touching the skull
+\item
+  Calibrate and start recording. Use \texttt{.easy} file for analysis in
+  Python.
+\end{enumerate}
+
+\subsection{Observation}\label{observation-4}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ pandas }\ImportTok{as}\NormalTok{ pd}
+\ImportTok{import}\NormalTok{ matplotlib.pyplot }\ImportTok{as}\NormalTok{ plt}
+\ImportTok{import}\NormalTok{ seaborn }\ImportTok{as}\NormalTok{ sns}
+
+\CommentTok{\# Read and preprocess the .easy file}
+\NormalTok{file\_path }\OperatorTok{=} \StringTok{\textquotesingle{}/Users/karthik/Desktop/Raw EEG Analysis/20240702153206\_JEEVAN 1\_Protocol 1.easy\textquotesingle{}}
+\NormalTok{column\_names }\OperatorTok{=}\NormalTok{ [}\SpecialStringTok{f\textquotesingle{}Channel\_}\SpecialCharTok{\{}\NormalTok{i}\OperatorTok{+}\DecValTok{1}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}} \ControlFlowTok{for}\NormalTok{ i }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(}\DecValTok{8}\NormalTok{)] }\OperatorTok{+}\NormalTok{ [}\StringTok{\textquotesingle{}Unused\_1\textquotesingle{}}\NormalTok{, }
+\StringTok{\textquotesingle{}Unused\_2\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Unused\_3\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Unused\_4\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Timestamp\textquotesingle{}}\NormalTok{]}
+
+\NormalTok{eeg\_data }\OperatorTok{=}\NormalTok{ pd.read\_csv(file\_path, delim\_whitespace}\OperatorTok{=}\VariableTok{True}\NormalTok{, header}\OperatorTok{=}\VariableTok{None}\NormalTok{, }
+\NormalTok{names}\OperatorTok{=}\NormalTok{column\_names)}
+
+\CommentTok{\# Extract only the EEG channels and the timestamp}
+\NormalTok{eeg\_channels }\OperatorTok{=}\NormalTok{ eeg\_data[column\_names[:}\DecValTok{8}\NormalTok{]]}
+\NormalTok{timestamps }\OperatorTok{=}\NormalTok{ eeg\_data[}\StringTok{\textquotesingle{}Timestamp\textquotesingle{}}\NormalTok{]}
+
+\CommentTok{\# Normalize the data}
+\NormalTok{eeg\_channels\_normalized }\OperatorTok{=}\NormalTok{ (eeg\_channels }\OperatorTok{{-}}\NormalTok{ eeg\_channels.mean()) }\OperatorTok{/}\NormalTok{ eeg\_channels.std()}
+
+\NormalTok{plt.figure(figsize}\OperatorTok{=}\NormalTok{(}\DecValTok{18}\NormalTok{, }\DecValTok{12}\NormalTok{))}
+\ControlFlowTok{for}\NormalTok{ i, channel }\KeywordTok{in} \BuiltInTok{enumerate}\NormalTok{(eeg\_channels\_normalized.columns):}
+\NormalTok{    plt.subplot(}\DecValTok{8}\NormalTok{, }\DecValTok{1}\NormalTok{, i }\OperatorTok{+} \DecValTok{1}\NormalTok{)}
+\NormalTok{    sns.lineplot(x}\OperatorTok{=}\NormalTok{timestamps, y}\OperatorTok{=}\NormalTok{eeg\_channels\_normalized[channel])}
+\NormalTok{    plt.title(channel)}
+\NormalTok{    plt.xlabel(}\StringTok{\textquotesingle{}Timestamp\textquotesingle{}}\NormalTok{)}
+\NormalTok{    plt.ylabel(}\StringTok{\textquotesingle{}Normalized Amplitude\textquotesingle{}}\NormalTok{)}
+
+\NormalTok{plt.tight\_layout()}
+\NormalTok{plt.show()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{eeg_files/figure-pdf/unnamed-chunk-2-1.pdf}
+
+Plot for Waveforms of \texttt{channel\_1} to \texttt{channel\_8}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ numpy }\ImportTok{as}\NormalTok{ np}
+\ImportTok{from}\NormalTok{ scipy.signal }\ImportTok{import}\NormalTok{ welch}
+
+\NormalTok{statistics }\OperatorTok{=}\NormalTok{ eeg\_channels.describe()}
+
+\BuiltInTok{print}\NormalTok{(}\StringTok{"Basic Statistics for each channel:"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Basic Statistics for each channel:
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(statistics)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+          Channel_1     Channel_2  ...     Channel_7     Channel_8
+count  3.000000e+04  3.000000e+04  ...  3.000000e+04  3.000000e+04
+mean  -2.090649e+08 -3.681771e+07  ... -3.710497e+07 -2.014704e+07
+std    4.776417e+07  2.883546e+06  ...  7.582251e+05  8.920607e+05
+min   -2.881841e+08 -4.315196e+07  ... -3.806277e+07 -2.184501e+07
+25%   -2.505293e+08 -3.800060e+07  ... -3.766180e+07 -2.088949e+07
+50%   -2.106696e+08 -3.701573e+07  ... -3.738470e+07 -2.013874e+07
+75%   -1.682614e+08 -3.422193e+07  ... -3.626013e+07 -1.955419e+07
+max   -1.233849e+08 -3.321896e+07  ... -3.364406e+07 -1.822300e+07
+
+[8 rows x 8 columns]
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Plot the power spectral density (PSD) for each channel}
+\NormalTok{plt.figure(figsize}\OperatorTok{=}\NormalTok{(}\DecValTok{18}\NormalTok{, }\DecValTok{12}\NormalTok{))}
+\ControlFlowTok{for}\NormalTok{ i, channel }\KeywordTok{in} \BuiltInTok{enumerate}\NormalTok{(eeg\_channels.columns):}
+\NormalTok{    plt.subplot(}\DecValTok{8}\NormalTok{, }\DecValTok{1}\NormalTok{, i }\OperatorTok{+} \DecValTok{1}\NormalTok{)}
+\NormalTok{    freqs, psd }\OperatorTok{=}\NormalTok{ welch(eeg\_channels[channel], fs}\OperatorTok{=}\DecValTok{500}\NormalTok{)}
+\NormalTok{    sns.lineplot(x}\OperatorTok{=}\NormalTok{freqs, y}\OperatorTok{=}\NormalTok{psd)}
+\NormalTok{    plt.title(}\SpecialStringTok{f\textquotesingle{}PSD {-} }\SpecialCharTok{\{}\NormalTok{channel}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}}\NormalTok{)}
+\NormalTok{    plt.xlabel(}\StringTok{\textquotesingle{}Frequency (Hz)\textquotesingle{}}\NormalTok{)}
+\NormalTok{    plt.ylabel(}\StringTok{\textquotesingle{}Power/Frequency (dB/Hz)\textquotesingle{}}\NormalTok{)}
+
+\NormalTok{plt.tight\_layout()}
+\NormalTok{plt.show()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{eeg_files/figure-pdf/unnamed-chunk-3-3.pdf}
+
+Power Spectral Density graph for each of the channels. \#\# Analysis
 
 The EEG Signals are acquired from the above mentioned readings. We
 recorded the raw EEG while the subject was relaxed with eyes closed. For
 EEG recording with MP35 system, it was important to position the subject
 away from the computer and to place MP35 away from the computer (set
-aside or clip to subject)
+aside or clip to subject).
+
+In the ENOBIO recording, the subject's Power spectrum showed most of the
+frequencies were around 10-15 Hz in majority of the channels. For
+\texttt{channel\_8} some frequencies were found to be
+\textasciitilde{}\(50Hz\).
 
 \section{Result}\label{result-3}
 
@@ -883,7 +1043,7 @@ by comparing the perception of sounds transmitted by air or by bone:
   test is a common example of air and bone conduction testing.
 \end{itemize}
 
-\section{Procedure}\label{procedure-5}
+\section{Procedure}\label{procedure-4}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -914,7 +1074,7 @@ by comparing the perception of sounds transmitted by air or by bone:
   Tests.
 \end{enumerate}
 
-\section{Observation}\label{observation-4}
+\section{Observation}\label{observation-5}
 
 \includegraphics{audiometry_files/figure-pdf/unnamed-chunk-1-1.pdf}
 
@@ -932,7 +1092,7 @@ by comparing the perception of sounds transmitted by air or by bone:
 
 \includegraphics{audiometry_files/figure-pdf/unnamed-chunk-8-1.pdf}
 
-\section{Analysis}\label{analysis-4}
+\section{Analysis}\label{analysis-3}
 
 Calculation of the hearing threshold of a person.
 
@@ -1392,7 +1552,7 @@ remove extra fluid and waste products from the body. Hemodialysis is a
 type of dialysis that uses a machine with an artificial filter to remove
 waste and extra fluids from the blood.
 
-\includegraphics[width=6.33333in,height=\textheight]{images/clipboard-2703843569.png}
+\includegraphics[width=4.34375in,height=2.65625in]{images/clipboard-2703843569.png}
 
 \subsection{Blood flow}\label{blood-flow}
 
