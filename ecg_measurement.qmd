@@ -67,14 +67,10 @@ table <- data |>
     freq = "Frequency f (in Hz)",
     time = "Time (in sec) = 1/f",
     bpm = "Beats per Min = 60/T"
-  ) |> 
-  tab_source_note(
-    source_note = "Source: DTE Lab, 4th floor, Dept of Medical Electronics"
   )
 
 # Display the table
 table
-
 
 ```
 

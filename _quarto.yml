@@ -4,19 +4,36 @@ project:
 # Book Metadata
 book:
   title: "Diagnostic and Therapeutic Equipments Lab Report"
-  author: "Karthik Dani"
-  date: "2024-06-11"  # Use ISO format for date
+  author:
+  - name: Karthik M Dani
+    id: 1BM22MD022
+    
+  - name: Kushaal Vijay
+    id: 1BM22MD023
+
+  - name: Lakshita Varma
+    id: 1BM22MD024
+    
+  date: "2024-07-17"
   chapters:
     - index.qmd
     - bp_measurement.qmd
     - ecg_measurement.qmd
+    - emg_measurement.qmd
+    - eeg.qmd
+    - audiometry.qmd
+    - simulation_ecg.qmd
+    - simulation_eeg.qmd
+    - simulation_defibrillator.qmd
+    - simulation_pacemaker.qmd
+    - simulation_hemodialysis_machine.qmd
 
 # Bibliography
 bibliography: references.bib
 
 # Table of Contents
 toc: true
-toc-depth: 2
+toc-depth: 1
 toc-title: "Table of Contents"
 
 # Formatting Options
@@ -24,7 +41,7 @@ format:
   html:
     theme: cosmo
     toc: true
-    toc-depth: 2
+    toc-depth: 1
     number-sections: true
     code-fold: true
     css: styles.css
@@ -35,7 +52,7 @@ format:
   pdf:
     documentclass: scrreprt
     toc: true
-    toc-depth: 2
+    toc-depth: 1
     number-sections: true
     geometry: "margin=1in"
     links-as-notes: true
@@ -44,7 +61,7 @@ format:
     keep-tex: true
   epub:
     toc: true
-    toc-depth: 2
+    toc-depth: 1
     number-sections: true
     cover-image: cover.png
     css: styles.css

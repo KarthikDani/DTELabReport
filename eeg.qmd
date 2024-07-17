@@ -1,0 +1,81 @@
+# EEG Signal Acquisition with Bio-PAC
+
+## Aim
+
+> Acquisition of EEG Signal using Bio-PAC using Bio-PAC system.
+
+## Theory
+
+### EEG Electrode Placement
+
+![](images/clipboard-1080795871.png){width="541"}
+
+-   Electrodes are typically placed on the scalp according to the International 10-20 system, which standardizes positions based on the relative distances between key points on the head.
+-   Each electrode location is labeled with a combination of a letter and a number (e.g., F3, P4), where the letter indicates the brain region (e.g., F for frontal, P for parietal) and the number indicates the hemisphere and position.
+
+### Frequency bands of EEG
+
+-   Delta - $\delta$ (0.5-4 Hz): Associated with deep sleep.
+-   Theta - $\theta$ (4-8 Hz): Related to light sleep, relaxation, and drowsiness.
+-   Alpha - $\alpha$ (8-13 Hz): Linked to relaxed wakefulness, often seen when eyes are closed.
+-   Beta - $\beta$ (13-30 Hz): Associated with active thinking, focus, and problem-solving.
+-   Gamma - $\gamma$ (30-100 Hz): Related to high-level information processing and cognitive functioning.
+
+## Procedure
+
+1.  
+
+-   Active Electrode (A1) \[Red wire\]: Place this electrode on the Forehead Right.
+-   Reference Electrode (R) \[Black wire\]: Place this electrode on the mastoid bone behind the ear or on an earlobe.
+-   Ground Electrode (G) \[White wire\]: Place this electrode on the Forehead Left.
+
+2.  To ensure calibration of electrodes, go to `Bio-PAC` \> `Lesson3` \> `channel 1` and select `EEG1`. Specify the channels associated with electrodes then click on `calibrate`.
+
+3.  Now position the subject away from computer, ask to close their eyes and relax. Then carry out recording and saving for each subject acquisition data then copy and paste in excel.
+
+## Observation
+
+```{r echo=FALSE}
+library(gt)
+
+# Sample data
+data <- data.frame(
+  subjects = c("Subject 1", "Subject 2"),
+  p2p = c(19.302284, 25.17906),
+  delta = c(1.0947, -47.723),
+  deltaT = c(28.505, 24.745),
+  freq = c(0.037729, 0.0404),
+  mean = c(NA, 10.111183),
+  stddev = c(NA, 5.62537),
+  samples = c(8975, 8761)
+)
+
+# Create a gt table
+table <- data |> 
+  gt() |> 
+  tab_header(
+    title = "EEG analysis",
+    subtitle = "Statistical analysis of EEG Data from different subjects"
+  ) |> 
+  cols_label(
+    subjects = "Subject ID",
+    p2p = "Peak to Peak (in micro volts)",
+    delta = "Delta",
+    deltaT = "Delta T",
+    freq = "Frequency f (in Hz)",
+    mean = "Mean",
+    stddev = "Std. Dev",
+    samples = "Samples"
+  )
+
+# Display the table
+table
+```
+
+## Analysis
+
+The EEG Signals are acquired from the above mentioned readings. We recorded the raw EEG while the subject was relaxed with eyes closed. For EEG recording with MP35 system, it was important to position the subject away from the computer and to place MP35 away from the computer (set aside or clip to subject)
+
+## Result
+
+The EEG Signal is acquired, recorded and analysed for statistical parameters.

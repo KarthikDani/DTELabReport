@@ -1,0 +1,54 @@
+# ECG Waveform Simulation
+
+## Aim
+
+1.  To understand normal ECG waveform.
+2.  To understand noise associated with ECG measurement i.e. line Frequency and baseline wandering
+3.  To understand various abnormalities associated with ECG pattern.
+
+## Pre Requisites
+
+-   Knowledge of various physiological system.
+-   Tools like NI LabVIEW and MATLAB.
+
+## Theory
+
+Human heart is a muscle that works continuously, much like a pump. Each beat of human heart is set in motion by an electrical signal from within heart muscle. The electrical activity of heart is recorded by an electrocardiogram, known as an EKG or ECG.
+
+Human heart's electrical system controls all the events that occur when heart pumps blood. The electrical system also is called the cardiac conduction system.
+
+### P Wave
+
+The P wave represents the wave of depolarization that spreads from the SA node throughout the atria, and is usually 0.08 to 0.1 seconds (80-100 ms) in duration. The brief isoelectric (zero voltage) period after the P wave represents the time in which the impulse is traveling within the AV node (where the conduction velocity is greatly retarded) and the bundle of His. Atrial rate can be calculated by determining the time interval between P waves.
+
+### QRS Complex
+
+The QRS complex represents ventricular depolarization. Ventricular rate can be calculated by determining the time interval between QRS complexes. The duration of the QRS complex is normally 0.06 to 0.1 seconds. This relatively short duration indicates that ventricular depolarization normally occurs very rapidly. If the QRS complex is prolonged (\> 0.1 sec), conduction is impaired within the ventricles. This can occur with bundle branch blocks or whenever a ventricular foci(abnormal pacemaker site) becomes the pacemaker driving the ventricle. Such an ectopic foci nearly always results in impulses being conducted over slower pathways within the heart, thereby increasing the time for depolarization and the duration of the QRS complex.
+
+### ST Segment
+
+The isoelectric period (ST segment) following the QRS is the time at which the entire ventricle is depolarized and roughly corresponds to the plateau phase of the ventricular action potential. The ST segment is important in the diagnosis of ventricular ischemia or hypoxia because under those conditions, the ST segment can become either depressed or elevated.
+
+### T Wave
+
+The T wave represents ventricular repolarization and is longer in duration than depolarization (i.e., conduction of the repolarization wave is slower than the wave of depolarization). Sometimes a small positive U wave may be seen following the T wave (not shown in figure 1). This wave represents the last remnants of ventricular repolarization. Inverted or prominent U waves indicate underlying pathology or conditions affecting repolarization.
+
+### QT Interval
+
+The Q-T interval represents the time for both ventricular depolarization and repolarization to occur, and therefore roughly estimates the duration of an average ventricular action potential. This interval can range from 0.2 to 0.4 seconds depending upon heart rate. At high heart rates, ventricular action potentials shorten in duration, which decreases the Q-T interval. Because prolonged Q-T intervals can be diagnostic for susceptibility to certain types of tachyarrhythmias, it is important to determine if a given Q-T interval is excessively long.
+
+## Simulation
+
+![Normal ECG Waveform](images/clipboard-2660105563.png){fig-align="center"}
+
+![Abnormal ECG Waveform](images/clipboard-2256462463.png){fig-align="center"}
+
+![Abnormal Moving ECG Waveform](images/clipboard-2993141644.png)
+
+![Abnormal ECG Main Plate](images/clipboard-3470925149.png){fig-align="center"}
+
+![Abnormal ECG Main Plate: Moving waveform](images/clipboard-3576673599.png)
+
+## Result
+
+> Thus, ECG Waveforms were simulated to observe the normal and abnormal patterns.

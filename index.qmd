@@ -7,7 +7,7 @@ header-includes: |
     \pagestyle{empty}
 ---
 
-## Certificate{-}
+## Certificate {.unnumbered}
 
 ```{=tex}
 \begin{center}
@@ -49,6 +49,12 @@ header-includes: |
 
 \begin{center}
     \textbf{Karthik Dani (1BM22MD022)}
+\end{center}
+\begin{center}
+    \textbf{Kushaal Vijay (1BM22MD023)}
+\end{center}
+\begin{center}
+    \textbf{Lakshita Varma (1BM22MD024)}
 \end{center}
 
 \begin{center}
